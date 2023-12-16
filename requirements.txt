@@ -6,7 +6,6 @@ dlib-bin
 pillow
 tensorflow
 tensorflow_hub
-tempfile
 matplotlib
 dlib
 Pillow
