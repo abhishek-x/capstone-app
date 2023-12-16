@@ -7,7 +7,6 @@ pillow
 tensorflow
 tensorflow_hub
 matplotlib
-dlib
 Pillow
 scipy
 keras
