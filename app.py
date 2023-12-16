@@ -6,6 +6,7 @@ import dlib
 import numpy as np
 from PIL import Image
 from scipy import signal
+import tensorflow_hub as hub
 from keras.optimizers import Adam
 from keras.models import load_model
 from collections import Counter
@@ -15,7 +16,7 @@ warnings.filterwarnings("ignore")
 
 # Load your pre-trained model
 custom_optimizer = Adam(learning_rate=0.0005)
-model = load_model("model.h5", compile=False)
+model = load_model("model.h5", custom_objects={'KerasLayer':hub.KerasLayer}, compile=False)
 model.compile(optimizer=custom_optimizer, loss='binary_crossentropy', metrics=['accuracy'])
 
 def detect_blur(frame, threshold=100):

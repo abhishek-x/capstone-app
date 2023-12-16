@@ -12,3 +12,4 @@ scipy
 keras
 collections-extended
 scikit-image
+tensorflow_hub
